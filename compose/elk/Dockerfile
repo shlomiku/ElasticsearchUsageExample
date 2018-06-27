@@ -1,4 +1,5 @@
 FROM sebp/elk:es241_l240_k461
+#FROM sebp/elk:521
 
 
 ENV ES_HOME /usr/share/elasticsearch
@@ -14,4 +15,4 @@ RUN gosu elasticsearch bin/plugin install mobz/elasticsearch-head --verbose
 #ENV KIBANA_HOME /usr/share/kibana
 WORKDIR ${KIBANA_HOME}
 RUN gosu kibana bin/kibana plugin -i elastic/sense
-# http://<your-host>:5601/apss/sense
+# http://<your-host>:5601/apps/sense
